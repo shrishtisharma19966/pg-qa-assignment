@@ -31,6 +31,7 @@ Well, previously you should run the API on your local machine so please follow t
 ~ $ npm install
 ~ $ npm start
 ```
+ - Access to `localhost:3000`
 
 ### API docs
 
