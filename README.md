@@ -33,7 +33,7 @@ Well, previously you should run the API on your local machine so please follow t
 ```
  - Access to `localhost:3000`
 
-### API docs
+### JSON API docs
 
 Before you start writing the test cases, you should know how the API works:
 
@@ -41,27 +41,33 @@ All the endpoints requires the following authentication:
 ```
 Auth Bearer Token: pag4nt1stoken
 ```
-The first endpoint returns the list of heroes with the data: id, name and powerlevel:
+The first endpoint returns the list of heroes
 ```
 GET /heroes
+result: JSON array - [ { id, name, powerlevel }, ... ]
 ```
-If you want to select one hero:
+If you want to get one hero: format 
 ```
 GET /heroes/:heroId
+result: JSON object - { id, name, powerlevel }
 ```
-Send a hero to fight:
+Add a hero to fight:
 ```
 POST /fight/addHero
-with a body like this: { heroId: '<HERO_ID>' }
+body: { heroId: '<HERO_ID>' }
+result: { message } 
 ```
 Make them fight:
 ```
 POST /fight
-without body
+body: empty
+result: { message }
 ```
-And finally clean the fight:
+And finally reset the fight:
 ```
 DELETE /fight
+body: empty
+result: { message }
 ```
 
 Rules:
