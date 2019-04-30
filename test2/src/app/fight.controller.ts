@@ -45,7 +45,7 @@ export class FightController {
     }
     const winner = this.fightService.getWinner();
     return {
-      message: `Heroes fighted hard! The winner is ${winner.name}!`,
+      message: `Heroes fought hard! The winner is ${winner.name}!`,
     };
   }
 
