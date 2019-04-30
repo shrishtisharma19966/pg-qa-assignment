@@ -101,7 +101,7 @@ export class FightController {
     return {
       message: `Yippie! ${hero.name} added. At the moment ${heroesCount} hero${
         heroesCount > 1 ? 'es' : ''
-      } waiting impaciently to fight.`,
+      } waiting to fight.`,
     };
   }
 }
